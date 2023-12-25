@@ -46,26 +46,26 @@ def create_snowflake_connection(account, role, warehouse, database, schema, user
 
 
 
-def execute_query(query):
-    try:
-        conn = snowflake.connector.connect(
-            account=st.session_state.account,
-            role=st.session_state.role,
-            warehouse=st.session_state.warehouse,
-            database=st.session_state.database,
-            schema=st.session_state.schema,
-            user=st.session_state.user,
-            password=st.session_state.password,
-            client_session_keep_alive=True
-        )
-        cursor = conn.cursor()
-        cursor.execute(query)
-        result = cursor.fetchall()
-        conn.close()
-        return result
-    except Exception as e:
-        st.error(f"Error executing query: {str(e)}")
-        return None
+# def execute_query(query):
+#     try:
+#         conn = snowflake.connector.connect(
+#             account=st.session_state.account,
+#             role=st.session_state.role,
+#             warehouse=st.session_state.warehouse,
+#             database=st.session_state.database,
+#             schema=st.session_state.schema,
+#             user=st.session_state.user,
+#             password=st.session_state.password,
+#             client_session_keep_alive=True
+#         )
+#         cursor = conn.cursor()
+#         cursor.execute(query)
+#         result = cursor.fetchall()
+#         conn.close()
+#         return result
+#     except Exception as e:
+#         st.error(f"Error executing query: {str(e)}")
+#         return None
 with st.sidebar:
     show_pages(
                 [

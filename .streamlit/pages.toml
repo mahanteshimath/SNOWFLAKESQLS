@@ -1,0 +1,9 @@
+[[pages]]
+path = "snowflakesql.py"
+name = "Home"
+icon = "🏠"
+
+[[pages]]
+path = "pages/Leet570.py"
+name = "Managers with at Least 5 Direct Reports"
+icon='1️⃣'

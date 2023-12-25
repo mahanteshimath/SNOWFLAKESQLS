@@ -14,7 +14,7 @@ st.set_page_config(
   initial_sidebar_state="expanded",
 ) 
 # show_pages()
-show_pages_from_config()
+# show_pages_from_config()
 # add_page_title()
 
 # show_pages(

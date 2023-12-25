@@ -76,7 +76,7 @@ with st.sidebar:
     st.markdown("[![Foo](https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-48.png)](https://www.linkedin.com/in/mahantesh-hiremath/) Connect me.")
     st.sidebar.header("Snowflake Credentials")
     expander = st.expander("Set Up SF Connection")
-    account = expander.text_input('Acount','mx31337.ca-central-1')
+    account = expander.text_input('Acount','mx31337.ca-central-1.aws')
     role = expander.text_input('Role','ACCOUNTADMIN')
     warehouse = expander.text_input('Warehouse','COMPUTE_WH')
     database = expander.text_input('Database','DB')

@@ -26,8 +26,10 @@ def execute_query(query):
         cursor = conn.cursor()
         cursor.execute(query)
         result = cursor.fetchall()
+        columns = [col[0] for col in cursor.description]  # Extract column names from cursor
         conn.close()
-        return result
+        result_df = pd.DataFrame(result, columns=columns)  # Create DataFrame with column names
+        return result_df
     except Exception as e:
         st.error(f"Error executing query: {str(e)}")
         return None

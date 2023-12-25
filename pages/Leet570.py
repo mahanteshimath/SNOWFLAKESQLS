@@ -11,30 +11,31 @@ from snowflakesql import *
 # st.write(st.session_state.user)
 # st.write(st.session_state.password)
 
-# def execute_query(query):
-#     try:
-#         conn = snowflake.connector.connect(
-#             account=st.session_state.account,
-#             role=st.session_state.role,
-#             warehouse=st.session_state.warehouse,
-#             database=st.session_state.database,
-#             schema=st.session_state.schema,
-#             user=st.session_state.user,
-#             password=st.session_state.password,
-#             client_session_keep_alive=True
-#         )
-#         cursor = conn.cursor()
-#         cursor.execute(query)
-#         result = cursor.fetchall()
-#         conn.close()
-#         return result
-#     except Exception as e:
-#         st.error(f"Error executing query: {str(e)}")
-#         return None
+def execute_query(query):
+    try:
+        conn = snowflake.connector.connect(
+            account=st.session_state.account,
+            role=st.session_state.role,
+            warehouse=st.session_state.warehouse,
+            database=st.session_state.database,
+            schema=st.session_state.schema,
+            user=st.session_state.user,
+            password=st.session_state.password,
+            client_session_keep_alive=True
+        )
+        cursor = conn.cursor()
+        cursor.execute(query)
+        result = cursor.fetchall()
+        conn.close()
+        return result
+    except Exception as e:
+        st.error(f"Error executing query: {str(e)}")
+        return None
 
 st.title('LeetCode 570. Managers with at Least 5 Direct Reports')
 left_column, right_column = st.columns(2)
 
+def main():
 with left_column:
      st.markdown(""" 
         ### Table: Employee
@@ -84,4 +85,8 @@ with right_column:
                     result = execute_query(query)
                     st.success("Query executed!")
                     result_df = pd.DataFrame(result)
-                    st.write(result_df)          
+                    st.write(result_df)
+                    
+                    
+if __name__ == "__main__":
+    main()

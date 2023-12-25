@@ -17,7 +17,7 @@ import pandas as pd
 # with st.echo("below"):
 #     from st_pages import show_pages_from_config
 
-#     show_pages_from_config()
+show_pages_from_config()
 
 st.set_page_config(
   page_title="Leetcodeforsnowflake",

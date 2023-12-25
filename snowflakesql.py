@@ -10,7 +10,7 @@ st.set_page_config(
   layout="wide",
   initial_sidebar_state="expanded",
 ) 
-
+show_pages()
 show_pages_from_config()
 add_page_title()
 

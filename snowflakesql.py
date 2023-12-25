@@ -62,7 +62,7 @@ with st.sidebar:
     password = expander.text_input("Password", type="password")
     if expander.button("Connect"):
         store_credentials(account, role, warehouse, database, schema, user, password)
-        # create_snowflake_connection(account, role, warehouse, database, schema, user, password)
+        connection = create_snowflake_connection(account, role, warehouse, database, schema, user, password)
 # add_page_title()
 
 # show_pages_from_config()
@@ -80,15 +80,15 @@ def main():
 
     # ... (other parts of your code)
 
-    if st.sidebar.button("myconnn"):
-        connection = create_snowflake_connection(account, role, warehouse, database, schema, user, password)
+    # if st.sidebar.button("myconnn"):
+    #     connection = create_snowflake_connection(account, role, warehouse, database, schema, user, password)
         
-        # Use the 'connection' object as needed
-        if connection:
-            st.error("All ok")
-        #     pass
-        else:
-            st.error("Snowflake connection could not be established.")
+    #     # Use the 'connection' object as needed
+    #     if connection:
+    #         st.error("All ok")
+    #     #     pass
+    #     else:
+    #         st.error("Snowflake connection could not be established.")
 
 # st.write(st.session_state.account)
 # st.write(st.session_state.role)

@@ -79,12 +79,12 @@ def main():
                 |------|
                 | John |
                 """)
-        query = st.text_area(""CREATE or replace TABLE Employee (
+        query = st.text_area("""CREATE or replace TABLE Employee (
                                         id INT,
                                         name VARCHAR(50),
                                         department VARCHAR(50),
                                         managerId INT
-                                    ) AS (
+                                                                ) AS (
                                         SELECT * FROM VALUES
                                             (101, 'John', 'A', NULL),
                                             (102, 'Dan', 'A', 101),
@@ -93,7 +93,7 @@ def main():
                                             (105, 'Anne', 'A', 101),
                                             (106, 'Ron', 'B', 101)
                                     )
-                                    "",height=250)
+                                    """,height=250)
          if st.button("Prepare data"):
               if query:
                    with st.spinner("Executing all queries..."):

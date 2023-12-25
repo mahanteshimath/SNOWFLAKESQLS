@@ -47,7 +47,7 @@ with st.sidebar:
     show_pages(
                 [
                     Page("snowflakesql.py", "Home", "🏠"),
-                    Page("pages\Leet570.py", "Managers with at Least 5 Direct Reports", "1️⃣")
+                    Page("pages/Leet570.py", "Managers with at Least 5 Direct Reports", "1️⃣")
                 ]
             )  
     st.markdown("[![Foo](https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-48.png)](https://www.linkedin.com/in/mahantesh-hiremath/) Connect me.")

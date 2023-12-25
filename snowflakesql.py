@@ -94,13 +94,13 @@ def main():
         else:
             st.error("Snowflake connection could not be established.")
 
-st.write(st.session_state.account)
-st.write(st.session_state.role)
-st.write(st.session_state.warehouse)
-st.write(st.session_state.database)
-st.write(st.session_state.schema)
-st.write(st.session_state.user)
-st.write(st.session_state.password)
+# st.write(st.session_state.account)
+# st.write(st.session_state.role)
+# st.write(st.session_state.warehouse)
+# st.write(st.session_state.database)
+# st.write(st.session_state.schema)
+# st.write(st.session_state.user)
+# st.write(st.session_state.password)
 # st.write(create_snowflake_connection(account,',', role,',', warehouse,',', database,',', schema,',', user,',', password))
 
 if __name__ == "__main__":

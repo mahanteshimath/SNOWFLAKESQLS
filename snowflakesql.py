@@ -8,6 +8,13 @@ import pandas as pd
 from st_pages import show_pages_from_config
 
 show_pages_from_config()
+
+st.code(Path(".streamlit/pages.toml").read_text(), language="toml")
+
+with st.echo("below"):
+    from st_pages import show_pages_from_config
+
+show_pages_from_config()
 st.set_page_config(
   page_title="Leetcodeforsnowflake",
   page_icon="  ",

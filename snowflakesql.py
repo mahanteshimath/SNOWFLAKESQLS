@@ -10,9 +10,16 @@ st.set_page_config(
   layout="wide",
   initial_sidebar_state="expanded",
 ) 
-show_pages()
-# show_pages_from_config()
-add_page_title()
+# show_pages()
+# # show_pages_from_config()
+# add_page_title()
+
+show_pages(
+          [
+              Page("snowflakesql.py", "Home", "🏠"),
+              Page("pages/Leet570.py", "Managers with at Least 5 Direct Reports", "1️⃣")
+          ]
+      )  
 
 # Function to store Snowflake credentials in session state
 def store_credentials(account, role, warehouse, database, schema, user, password):
@@ -70,12 +77,7 @@ def create_snowflake_connection(account, role, warehouse, database, schema, user
 #         st.error(f"Error executing query: {str(e)}")
 #         return None
 with st.sidebar:
-    show_pages(
-                [
-                    Page("snowflakesql.py", "Home", "🏠"),
-                    Page("pages/Leet570.py", "Managers with at Least 5 Direct Reports", "1️⃣")
-                ]
-            )  
+
     st.markdown("[![Foo](https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-48.png)](https://www.linkedin.com/in/mahantesh-hiremath/) Connect me.")
     st.sidebar.header("Snowflake Credentials")
     expander = st.expander("Set Up SF Connection")

@@ -5,7 +5,7 @@ import time
 import pandas as pd
 from st_pages import show_pages_from_config
 
-show_pages_from_config(".streamlit/pages_sections.toml")
+show_pages_from_config(".streamlit/pages.toml")
 
 st.set_page_config(
   page_title="Leetcodeforsnowflake",

@@ -1,5 +1,5 @@
 [[pages]]
-path = "snowflakesql.py"
+path = "/snowflakesql.py"
 name = "Home"
 icon = "🏠"
 

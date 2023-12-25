@@ -46,7 +46,7 @@ def create_snowflake_connection(account, role, warehouse, database, schema, user
 with st.sidebar:
     show_pages(
                 [
-                    Page("/snowflakesql.py", "Home", "🏠"),
+                    Page("snowflakesql.py", "Home", "🏠"),
                     Page("pages/Leet570.py", "Managers with at Least 5 Direct Reports", "1️⃣")
                 ]
             )  

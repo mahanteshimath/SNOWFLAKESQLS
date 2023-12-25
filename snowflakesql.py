@@ -3,11 +3,21 @@ import snowflake.connector
 from pathlib import Path
 import time
 import pandas as pd
-# from st_pages import Page, show_pages, show_pages_from_config, add_page_title
 
-from st_pages import show_pages_from_config
+add_page_title()  # Optional method to add title and icon to current page
 
-show_pages_from_config()
+"## Alternative approach, using a config file"
+
+"Contents of `.streamlit/pages.toml`"
+
+st.code(Path(".streamlit/pages.toml").read_text(), language="toml")
+
+"Streamlit script:"
+
+with st.echo("below"):
+    from st_pages import show_pages_from_config
+
+    show_pages_from_config()
 
 st.set_page_config(
   page_title="Leetcodeforsnowflake",

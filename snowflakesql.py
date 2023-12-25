@@ -3,7 +3,11 @@ import snowflake.connector
 from pathlib import Path
 import time
 import pandas as pd
-from st_pages import Page, show_pages, show_pages_from_config, add_page_title
+# from st_pages import Page, show_pages, show_pages_from_config, add_page_title
+
+from st_pages import show_pages_from_config
+
+show_pages_from_config()
 st.set_page_config(
   page_title="Leetcodeforsnowflake",
   page_icon="  ",

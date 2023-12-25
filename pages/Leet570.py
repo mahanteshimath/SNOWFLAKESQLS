@@ -79,20 +79,20 @@ def main():
                 |------|
                 | John |
                 """)
-            query = st.text_area( "Data Needed", "CREATE or replace TABLE Employee ("
-                                            "id INT,"
-                                           " name VARCHAR(50),"
-                                           " department VARCHAR(50),"
-                                           " managerId INT"
-                                           "                         ) AS ("
-                                           " SELECT * FROM VALUES"
-                                           "     (101, 'John', 'A', NULL),"
-                                           "     (102, 'Dan', 'A', 101),"
-                                          "      (103, 'James', 'A', 101),"
-                                          "     (104, 'Amy', 'A', 101),"
-                                          "     (105, 'Anne', 'A', 101),"
-                                          "      (106, 'Ron', 'B', 101)"
-                                        ")",,height=250)
+        query = st.text_area( "Data Needed", "CREATE or replace TABLE Employee ("
+                                        "id INT,"
+                                       " name VARCHAR(50),"
+                                       " department VARCHAR(50),"
+                                       " managerId INT"
+                                       "                         ) AS ("
+                                       " SELECT * FROM VALUES"
+                                       "     (101, 'John', 'A', NULL),"
+                                       "     (102, 'Dan', 'A', 101),"
+                                      "      (103, 'James', 'A', 101),"
+                                      "     (104, 'Amy', 'A', 101),"
+                                      "     (105, 'Anne', 'A', 101),"
+                                      "      (106, 'Ron', 'B', 101)"
+                                    ")",,height=250)
 
          if st.button("Prepare data"):
               if query:

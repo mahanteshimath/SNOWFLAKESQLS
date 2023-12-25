@@ -81,16 +81,12 @@ def main():
     # ... (other parts of your code)
 
     if st.sidebar.button("myconnn"):
-        connection = create_snowflake_connection(
-            st.session_state.account, st.session_state.role, st.session_state.warehouse,
-            st.session_state.database, st.session_state.schema, st.session_state.user,
-            st.session_state.password
-        )
+        connection = create_snowflake_connection(account, role, warehouse, database, schema, user, password)
         
         # Use the 'connection' object as needed
         if connection:
-            # Perform operations with the 'connection'
-            pass
+            st.error("All ok")
+        #     pass
         else:
             st.error("Snowflake connection could not be established.")
 

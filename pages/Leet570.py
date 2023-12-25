@@ -79,7 +79,7 @@ def main():
                 |------|
                 | John |
 
-                ********DDL*************************
+               ``` sql
                 CREATE or REPLACE TABLE Employee (
                         id INT,
                         name VARCHAR(50),
@@ -95,7 +95,7 @@ def main():
                             (106, 'Ron', 'B', 101)
 
 
-                ***********************************
+                ```
                 """)
     
     with right_column:

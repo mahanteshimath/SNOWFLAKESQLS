@@ -79,7 +79,7 @@ def main():
                 |------|
                 | John |
                 """)
-        query = st.text_area("""CREATE or replace TABLE Employee (
+        query ="""CREATE or replace TABLE Employee (
                                         id INT,
                                         name VARCHAR(50),
                                         department VARCHAR(50),
@@ -92,8 +92,8 @@ def main():
                                             (104, 'Amy', 'A', 101),
                                             (105, 'Anne', 'A', 101),
                                             (106, 'Ron', 'B', 101)
-                                    )
-                                    """,height=250)
+                                    )"""
+
          if st.button("Prepare data"):
               if query:
                    with st.spinner("Executing all queries..."):

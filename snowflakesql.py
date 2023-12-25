@@ -28,13 +28,13 @@ def store_credentials(account, role, warehouse, database, schema, user, password
 def create_snowflake_connection(account, role, warehouse, database, schema, user, password):
     try:
         conn = snowflake.connector.connect(
-            account='mx31337.ca-central-1.aws', #account,
-            role='ACCOUNTADMIN',#role,
-            warehouse='COMPUTE_WH',##warehouse,
-            database='DB',#database,
-            schema='SCH',#schema,
-            user='learnatozaboutdata04',#user,
-            password='Learnatozaboutdata04@123#',#password,
+            account=account,
+            role=role,
+            warehouse=warehouse,
+            database=database,
+            schema=schema,
+            user=user,
+            password=password,
             client_session_keep_alive=True
         )
         st.toast("Connection to Snowflake successfully!", icon='🎉')

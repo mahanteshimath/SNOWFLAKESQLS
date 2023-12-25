@@ -3,7 +3,7 @@ import snowflake.connector
 from pathlib import Path
 import time
 import pandas as pd
-from st_pages import show_pages_from_config
+from st_pages import show_pages_from_config, Page, Section, add_page_title, show_pages
 
 show_pages_from_config(".streamlit/pages.toml")
 

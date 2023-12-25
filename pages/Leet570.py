@@ -81,10 +81,7 @@ with right_column:
      if st.button("Execute Queries"):
           if query:
                with st.spinner("Executing all queries..."):
-                    connection = create_snowflake_connection(account, role, warehouse, database, schema, user, password)
-                    cursor = connection.cursor()
-                    cursor.execute(query)
-                    result = cursor.fetchall()
+                    result = execute_query(query)
                     st.success("Query executed!")
                     result_df = pd.DataFrame(result)
-                    st.write(result_df)            
+                    st.write(result_df)          

@@ -11,6 +11,9 @@ st.set_page_config(
   initial_sidebar_state="expanded",
 ) 
 
+show_pages_from_config()
+add_page_title()
+
 # Function to store Snowflake credentials in session state
 def store_credentials(account, role, warehouse, database, schema, user, password):
     st.session_state.account = account

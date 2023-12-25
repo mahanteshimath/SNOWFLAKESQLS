@@ -11,15 +11,15 @@ st.set_page_config(
   initial_sidebar_state="expanded",
 ) 
 # show_pages()
-# # show_pages_from_config()
+show_pages_from_config()
 # add_page_title()
 
-show_pages(
-          [
-              Page("snowflakesql.py", "Home", "🏠"),
-              Page("pages/Leet570.py", "Managers with at Least 5 Direct Reports", "1️⃣")
-          ]
-      )  
+# show_pages(
+#           [
+#               Page("snowflakesql.py", "Home", "🏠"),
+#               Page("pages/Leet570.py", "Managers with at Least 5 Direct Reports", "1️⃣")
+#           ]
+#       )  
 
 # Function to store Snowflake credentials in session state
 def store_credentials(account, role, warehouse, database, schema, user, password):

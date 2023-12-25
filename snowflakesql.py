@@ -3,16 +3,8 @@ import snowflake.connector
 from pathlib import Path
 import time
 import pandas as pd
-from st_pages import show_pages_from_config, add_page_title
+from st_pages import Page, add_page_title, show_pages
 
-st.code(Path(".streamlit/pages.toml").read_text(), language="toml")
-
-"Streamlit script:"
-
-with st.echo("below"):
-    from st_pages import show_pages_from_config
-
-    show_pages_from_config()
 
 st.set_page_config(
   page_title="Leetcodeforsnowflake",
@@ -20,16 +12,13 @@ st.set_page_config(
   layout="wide",
   initial_sidebar_state="expanded",
 ) 
-# show_pages()
-# show_pages_from_config()
-# add_page_title()
 
-# show_pages(
-#           [
-#               Page("snowflakesql.py", "Home", "🏠"),
-#               Page("pages/Leet570.py", "Managers with at Least 5 Direct Reports", "1️⃣")
-#           ]
-#       )  
+show_pages(
+          [
+              Page("snowflakesql.py", "Home", "🏠"),
+              Page("pages/Leet570.py", "Managers with at Least 5 Direct Reports", "1️⃣")
+          ]
+      )  
 
 # Function to store Snowflake credentials in session state
 def store_credentials(account, role, warehouse, database, schema, user, password):

@@ -3,13 +3,6 @@ import snowflake.connector
 # from snowflakesql import connect_to_snowflake, store_credentials
 from snowflakesql import *
 
-# st.write(st.session_state.account)
-# st.write(st.session_state.role)
-# st.write(st.session_state.warehouse)
-# st.write(st.session_state.database)
-# st.write(st.session_state.schema)
-# st.write(st.session_state.user)
-# st.write(st.session_state.password)
 
 def execute_query(query):
     try:

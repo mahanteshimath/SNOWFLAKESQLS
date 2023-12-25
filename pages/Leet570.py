@@ -78,8 +78,9 @@ def main():
                 | name |
                 |------|
                 | John |
-                """)
-        query = """CREATE or replace TABLE Employee (
+
+                ********DDL*************************
+                CREATE or REPLACE TABLE Employee (
                         id INT,
                         name VARCHAR(50),
                         department VARCHAR(50),
@@ -92,17 +93,10 @@ def main():
                             (104, 'Amy', 'A', 101),
                             (105, 'Anne', 'A', 101),
                             (106, 'Ron', 'B', 101)
-                    );"""
-         st.code(query, language='sql')
 
 
-         if st.button("Prepare data"):
-              if query:
-                   with st.spinner("Executing all queries..."):
-                        result = execute_query(query)
-                        st.success("Query executed!")
-                        result_df = pd.DataFrame(result)
-                        st.write(result_df)
+                ***********************************
+                """)
     
     with right_column:
          query = st.text_area("Write query",height=250)

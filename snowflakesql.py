@@ -4,24 +4,24 @@ from pathlib import Path
 import time
 import pandas as pd
 
-# add_page_title()  # Optional method to add title and icon to current page
+# # add_page_title()  # Optional method to add title and icon to current page
 
-"## Alternative approach, using a config file"
+# "## Alternative approach, using a config file"
 
-"Contents of `.streamlit/pages.toml`"
+# "Contents of `.streamlit/pages.toml`"
 
-st.code(Path(".streamlit/pages.toml").read_text(), language="toml")
+# st.code(Path(".streamlit/pages.toml").read_text(), language="toml")
 
-"Streamlit script:"
+# "Streamlit script:"
 
-with st.echo("below"):
-    from st_pages import show_pages_from_config
+# with st.echo("below"):
+#     from st_pages import show_pages_from_config
 
-    show_pages_from_config()
+#     show_pages_from_config()
 
 st.set_page_config(
   page_title="Leetcodeforsnowflake",
-  page_icon="  ",
+  page_icon=":house:",
   layout="wide",
   initial_sidebar_state="expanded",
 ) 

@@ -19,7 +19,7 @@ show_pages(
               Page("pages/Leet570.py", "Managers with at Least 5 Direct Reports", "1️⃣")
           ]
       )  
-
+add_page_title()
 # Function to store Snowflake credentials in session state
 def store_credentials(account, role, warehouse, database, schema, user, password):
     st.session_state.account = account

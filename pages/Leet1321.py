@@ -37,7 +37,7 @@ def main():
     with left_column:
          
          st.markdown(""" 
-                Table: Customer
+                **Table: Customer
 
                 +---------------+---------+
                 | Column Name   | Type    |
@@ -47,6 +47,8 @@ def main():
                 | visited_on    | date    |
                 | amount        | int     |
                 +---------------+---------+
+
+
                 In SQL,(customer_id, visited_on) is the primary key for this table.
                 This table contains data about customer transactions in a restaurant.
                 visited_on is the date on which the customer with ID (customer_id) has visited the restaurant.
@@ -65,7 +67,7 @@ def main():
 
                 Example 1:
 
-                Input: 
+                ****Input: 
                 Customer table:
                 +-------------+--------------+--------------+-------------+
                 | customer_id | name         | visited_on   | amount      |
@@ -82,7 +84,8 @@ def main():
                 | 1           | Jhon         | 2019-01-10   | 130         | 
                 | 3           | Jade         | 2019-01-10   | 150         | 
                 +-------------+--------------+--------------+-------------+
-                Output: 
+
+                ***Output: 
                 +--------------+--------------+----------------+
                 | visited_on   | amount       | average_amount |
                 +--------------+--------------+----------------+
@@ -91,6 +94,7 @@ def main():
                 | 2019-01-09   | 840          | 120            |
                 | 2019-01-10   | 1000         | 142.86         |
                 +--------------+--------------+----------------+
+
                 Explanation: 
                 1st moving average from 2019-01-01 to 2019-01-07 has an average_amount of (100 + 110 + 120 + 130 + 110 + 140 + 150)/7 = 122.86
                 2nd moving average from 2019-01-02 to 2019-01-08 has an average_amount of (110 + 120 + 130 + 110 + 140 + 150 + 80)/7 = 120
@@ -98,20 +102,25 @@ def main():
                 4th moving average from 2019-01-04 to 2019-01-10 has an average_amount of (130 + 110 + 140 + 150 + 80 + 110 + 130 + 150)/7 = 142.86
 
                ``` sql
-                CREATE or REPLACE TABLE Employee (
-                        id INT,
-                        name VARCHAR(50),
-                        department VARCHAR(50),
-                        managerId INT
-                    ) AS (
-                        SELECT * FROM VALUES
-                            (101, 'John', 'A', NULL),
-                            (102, 'Dan', 'A', 101),
-                            (103, 'James', 'A', 101),
-                            (104, 'Amy', 'A', 101),
-                            (105, 'Anne', 'A', 101),
-                            (106, 'Ron', 'B', 101)
-                            )
+                CREATE or replace TABLE Customer (
+                customer_id INT,
+                name VARCHAR(50),
+                visited_on DATE,
+                amount INT
+                ) AS (
+                SELECT * FROM VALUES
+                (1, 'Jhon', '2019-01-01', 100),
+                (2, 'Daniel', '2019-01-02', 110),
+                (3, 'Jade', '2019-01-03', 120),
+                (4, 'Khaled', '2019-01-04', 130),
+                (5, 'Winston', '2019-01-05', 110),
+                (6, 'Elvis', '2019-01-06', 140),
+                (7, 'Anna', '2019-01-07', 150),
+                (8, 'Maria', '2019-01-08', 80),
+                (9, 'Jaze', '2019-01-09', 110),
+                (1, 'Jhon', '2019-01-10', 130),
+                (3, 'Jade', '2019-01-10', 150)
+                )
 
 
                 ```

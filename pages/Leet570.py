@@ -4,6 +4,7 @@ import snowflake.connector
 from snowflakesql import *
 from st_pages import add_page_title
 
+st.set_page_config(page_title="Managers with at Least 5 Direct Reports", layout="wide", page_icon='1️⃣')
 
 def execute_query(query):
     try:

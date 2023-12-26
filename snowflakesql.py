@@ -105,7 +105,7 @@ with st.sidebar:
 
 
 def main(): 
-    st.title('1st Step App')
+    st.title('How to use leetcodeforsnowsql ?')
 
     # ... (other parts of your code)
 

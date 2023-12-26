@@ -1,2 +1,2 @@
 # SNOWFLAKESQLS
-This is streamlit  app off collection of sql interview questions solved with Snowflake
+This is streamlit  app  collection of sql interview questions solved with Snowflake

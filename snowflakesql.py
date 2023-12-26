@@ -17,6 +17,7 @@ show_pages(
           [
               Page("snowflakesql.py", "Home", "🏠"),
               Page("pages/Leet570.py", "Managers with at Least 5 Direct Reports", "1️⃣"),
+              Page("pages/Leet1321.py", "Restaurant Growth", "2️⃣"),
           ]
       )  
 # add_page_title()

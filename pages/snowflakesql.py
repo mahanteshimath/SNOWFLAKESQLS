@@ -15,7 +15,7 @@ st.set_page_config(
 
 show_pages(
           [
-              Page("snowflakesql.py", "Home", "🏠"),
+              Page("pages/snowflakesql.py", "Home", "🏠"),
               Page("pages/Leet570.py", "Managers with at Least 5 Direct Reports", "1️⃣"),
           ]
       )  

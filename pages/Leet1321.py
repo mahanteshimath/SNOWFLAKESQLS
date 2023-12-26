@@ -36,7 +36,8 @@ left_column, right_column = st.columns(2)
 def main():
     with left_column:
          
-         st.markdown("""Table: Customer
+         st.markdown("""
+            Table: Customer
 
             +---------------+---------+
             | Column Name   | Type    |
@@ -97,29 +98,27 @@ def main():
             4th moving average from 2019-01-04 to 2019-01-10 has an average_amount of (130 + 110 + 140 + 150 + 80 + 110 + 130 + 150)/7 = 142.86
 
             ``` sql
-                CREATE TABLE Customer (
-                    customer_id INT,
-                    name VARCHAR(50),
-                    visited_on DATE,
-                    amount INT
-                ) AS (
-                    VALUES
-                    (1, 'Jhon', '2019-01-01', 100),
-                    (2, 'Daniel', '2019-01-02', 110),
-                    (3, 'Jade', '2019-01-03', 120),
-                    (4, 'Khaled', '2019-01-04', 130),
-                    (5, 'Winston', '2019-01-05', 110),
-                    (6, 'Elvis', '2019-01-06', 140),
-                    (7, 'Anna', '2019-01-07', 150),
-                    (8, 'Maria', '2019-01-08', 80),
-                    (9, 'Jaze', '2019-01-09', 110),
-                    (1, 'Jhon', '2019-01-10', 130),
-                    (3, 'Jade', '2019-01-10', 150)
-                    )
-
-
+            CREATE TABLE Customer (
+                customer_id INT,
+                name VARCHAR(50),
+                visited_on DATE,
+                amount INT
+            ) AS (
+                VALUES
+                (1, 'Jhon', '2019-01-01', 100),
+                (2, 'Daniel', '2019-01-02', 110),
+                (3, 'Jade', '2019-01-03', 120),
+                (4, 'Khaled', '2019-01-04', 130),
+                (5, 'Winston', '2019-01-05', 110),
+                (6, 'Elvis', '2019-01-06', 140),
+                (7, 'Anna', '2019-01-07', 150),
+                (8, 'Maria', '2019-01-08', 80),
+                (9, 'Jaze', '2019-01-09', 110),
+                (1, 'Jhon', '2019-01-10', 130),
+                (3, 'Jade', '2019-01-10', 150)
+                )
             ```
-            """)
+                """)
     
     with right_column:
          query = st.text_area("Write query",height=250)

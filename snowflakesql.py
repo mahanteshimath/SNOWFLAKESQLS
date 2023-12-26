@@ -15,8 +15,8 @@ st.set_page_config(
 
 show_pages(
           [
-              Page("/workspaces/SNOWFLAKESQLS/snowflakesql.py", "Home", "🏠"),
-              Page("/workspaces/SNOWFLAKESQLS/pages/Leet570.py", "Managers with at Least 5 Direct Reports", "1️⃣"),
+              Page("SNOWFLAKESQLS/snowflakesql.py", "Home", "🏠"),
+              Page("pages/Leet570.py", "Managers with at Least 5 Direct Reports", "1️⃣"),
           ]
       )  
 # add_page_title()

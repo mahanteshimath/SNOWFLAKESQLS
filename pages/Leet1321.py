@@ -36,8 +36,7 @@ left_column, right_column = st.columns(2)
 def main():
     with left_column:
          
-         st.markdown(""" 
-            Table: Customer
+         st.markdown("""Table: Customer
 
             +---------------+---------+
             | Column Name   | Type    |

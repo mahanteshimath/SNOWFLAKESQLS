@@ -33,6 +33,8 @@ st.title('LeetCode 185. Department Top Three Salaries')
 left_column, right_column = st.columns(2)
 
 def main():
+    st.set_page_config(page_title="LeetCode 185. Department Top Three Salaries", page_icon="📈")
+
     with left_column:
          
         st.markdown(""" 

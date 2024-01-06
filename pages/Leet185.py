@@ -5,7 +5,6 @@ import snowflake.connector
 from snowflakesql import *
 from st_pages import Page, add_page_title, show_pages
 
-st.set_page_config( layout="wide")
 
 def execute_query(query):
     try:
